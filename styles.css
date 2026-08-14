@@ -48,3 +48,22 @@ footer{border-top:1px solid var(--border);padding:36px 0 50px;color:var(--muted)
 footer a{color:var(--muted)}
 hr{border:0;border-top:1px solid var(--border);margin:34px 0}
 @media(max-width:800px){.grid{grid-template-columns:1fr}.nav{height:auto;padding:14px 0;align-items:flex-start;flex-direction:column}nav{gap:12px}.hero{padding-top:44px}.footer-grid{grid-template-columns:1fr}table{display:block;overflow-x:auto}}
+
+
+.tier{margin:26px 0 40px}
+.tier-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.tier-label{font-size:.78rem;font-weight:850;text-transform:uppercase;letter-spacing:.07em;padding:6px 9px;border-radius:8px;background:var(--accent2);color:var(--accent)}
+.meta{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.pill{font-size:.78rem;padding:5px 8px;border-radius:999px;border:1px solid var(--border);background:#fff}
+.pill.verified{background:#edf7f4}
+.pill.note{background:#fff8e7}
+.referral-note{font-size:.82rem;color:var(--muted);margin-top:9px}
+.rating{font-weight:800}
+.compact-list{padding-left:20px}
+.compact-list li{margin:.25rem 0}
+.company-row{display:grid;grid-template-columns:1.1fr 1.6fr .8fr;gap:18px;align-items:start;border-top:1px solid var(--border);padding:20px 0}
+.company-row:first-child{border-top:0}
+.owner-box{background:#101c19;color:#edf7f4;border-radius:16px;padding:20px}
+.owner-box a{color:#bfe7dd}
+.code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#eef2f1;padding:2px 5px;border-radius:5px}
+@media(max-width:800px){.company-row{grid-template-columns:1fr}}

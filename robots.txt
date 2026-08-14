@@ -4,9 +4,7 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
-# GPTBot controls model-training crawling, not ChatGPT Search.
-# Change Allow to Disallow if you prefer not to permit training crawling.
-User-agent: GPTBot
-Allow: /
+# Analytics owner page should not be indexed.
+Disallow: /analytics.html
 
-Sitemap: https://YOUR-DOMAIN-HERE/sitemap.xml
+Sitemap: https://myeloblast18.github.io/healthcare-survey-guide/sitemap.xml

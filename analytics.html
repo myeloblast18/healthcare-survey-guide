@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Owner Analytics | Healthcare Survey Guide</title>
+  <meta name="description" content="Owner analytics control center.">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="canonical" href="https://myeloblast18.github.io/healthcare-survey-guide/analytics.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Owner Analytics | Healthcare Survey Guide">
+  <meta property="og:description" content="Owner analytics control center.">
+  <meta property="og:url" content="https://myeloblast18.github.io/healthcare-survey-guide/analytics.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="styles.css">
+  
+  
+<script src="site-config.js"></script>
+<script src="analytics.js" defer></script>
+
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">Healthcare Survey Guide</a>
+    <nav aria-label="Main navigation">
+      <a href="best-paid-medical-surveys.html">Best Paid Surveys</a>
+      <a href="companies.html">All Companies</a>
+      <a href="healthcare-communities.html">Communities</a>
+      <a href="physicians.html">Physicians</a>
+      <a href="other-hcps.html">Other HCPs</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+
+<section class="hero"><div class="wrap"><div class="eyebrow">Owner tools · not indexed</div><h1>Website analytics control center</h1><p class="lede">Private-by-convention owner page with shortcuts for traffic, search visibility, and repository diagnostics. This page does not itself expose your Google Analytics data.</p></div></section>
+<main><div class="wrap">
+  <div class="owner-box">
+    <h2 style="margin-top:0">Tracking status</h2>
+    <p id="ga-status">Checking site configuration…</p>
+  </div>
+
+  <div class="grid" style="margin-top:20px">
+    <article class="card"><h3>Google Analytics 4</h3><p>Website visitors, acquisition sources, page views, realtime users, and custom referral-click events.</p><a class="btn" href="https://analytics.google.com/analytics/web/" rel="noopener">Open Google Analytics</a></article>
+    <article class="card"><h3>Google Search Console</h3><p>Google queries, impressions, clicks, CTR, index coverage, and sitemap status.</p><a class="btn" href="https://search.google.com/search-console" rel="noopener">Open Search Console</a></article>
+    <article class="card"><h3>GitHub traffic</h3><p>Repository views, clones, and GitHub referrers. This is not the same as website visitor analytics.</p><a class="btn" href="https://github.com/myeloblast18/healthcare-survey-guide/graphs/traffic" rel="noopener">Open GitHub Traffic</a></article>
+  </div>
+
+  <h2>Events this site will track in GA4</h2>
+  <p>Once a real GA4 Measurement ID is inserted into <span class="code">site-config.js</span>, every page will send normal page-view data. Referral buttons also send a custom <span class="code">referral_click</span> event with the company name, destination URL, link text, and page path.</p>
+
+  <h2>After GA4 is connected</h2>
+  <ol>
+    <li>Use <strong>Realtime</strong> to confirm your own visit appears.</li>
+    <li>In Reports/Explorations, filter event name to <span class="code">referral_click</span>.</li>
+    <li>Use the event parameter <span class="code">company</span> to compare outbound sign-up interest by panel.</li>
+    <li>Use Search Console separately to see which Google queries generate impressions and clicks.</li>
+  </ol>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      const id = (window.SITE_CONFIG && window.SITE_CONFIG.GA_MEASUREMENT_ID) || "";
+      const connected = /^G-[A-Z0-9]+$/i.test(id) && id !== "G-REPLACE_ME";
+      const el = document.getElementById("ga-status");
+      if (connected) {
+        el.innerHTML = "<strong>GA4 configured:</strong> " + id + ". Open Google Analytics Realtime and visit the site to confirm collection.";
+      } else {
+        el.innerHTML = "<strong>GA4 not connected yet.</strong> Create a GA4 web stream and replace <span class='code'>G-REPLACE_ME</span> in <span class='code'>site-config.js</span> with your Measurement ID.";
+      }
+    });
+  </script>
+</div></main>
+
+
+<footer>
+  <div class="wrap footer-grid">
+    <div>
+      <strong>Healthcare Survey Guide</strong>
+      <p>Independent educational directory of paid healthcare market-research panels and professional communities. Referral relationships are disclosed.</p>
+    </div>
+    <div>
+      <strong>Explore</strong><br>
+      <a href="best-paid-medical-surveys.html">Best paid surveys</a><br>
+      <a href="companies.html">All companies</a><br>
+      <a href="healthcare-communities.html">Communities</a>
+    </div>
+    <div>
+      <strong>Transparency</strong><br>
+      <a href="about.html#methodology">Methodology</a><br>
+      <a href="about.html#disclosure">Referral disclosure</a><br>
+      <span>Last reviewed: Aug. 14, 2026</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

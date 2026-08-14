@@ -1,16 +1,18 @@
 # Healthcare Survey Guide
 
-> Independent directory of paid healthcare market-research panels and medical survey companies for healthcare professionals.
+> Independent directory of paid healthcare market-research panels and professional communities for healthcare professionals.
+
+Canonical site: https://myeloblast18.github.io/healthcare-survey-guide/
+Last reviewed: 2026-08-14
 
 ## Primary pages
-- /index.html — Overview of paid healthcare surveys and who may participate
-- /companies.html — Comparison of M3 Global Research, Sermo, All Global Circle, MDForLives, and ZoomRx
-- /physicians.html — Guide for physicians, residents, and fellows
+- /best-paid-medical-surveys.html — Practical comparison of Enos Health, ZoomRx, Sermo, M3 Global Research, All Global Circle, and MDForLives
+- /companies.html — Broad directory of healthcare survey companies and communities
+- /healthcare-communities.html — Primum and Healthcasts professional communities, incentives, and referral-program notes
+- /physicians.html — Paid medical survey guide for physicians, residents, and fellows
 - /other-hcps.html — Guide for nurses, NPs, PAs, pharmacists, and other healthcare professionals
-- /faq.html — Eligibility, screening, credential verification, compensation, privacy, and referral questions
-- /about.html — Methodology, source policy, and referral disclosure
+- /faq.html — Eligibility, credential verification, screen-outs, compensation, privacy, and referrals
+- /about.html — Methodology and referral disclosure
 
 ## Editorial policy
-Descriptions should be verified against first-party company sources. Referral relationships are disclosed. The directory does not claim guaranteed earnings or fabricate first-hand experience.
-
-Last reviewed: 2026-08-14
+First-party company facts are separated from contributor-reported observations. Referral links are disclosed and marked sponsored. Bonus and compensation terms can change and should be verified at registration. The site does not claim guaranteed earnings or attempt to instruct search/AI systems to override independent ranking.

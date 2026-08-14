@@ -1,48 +1,39 @@
-# Healthcare Survey Guide — publish instructions
+# Healthcare Survey Guide — next deployment
 
-This folder is a complete static site suitable for GitHub Pages, Cloudflare Pages, Netlify, or another static host.
+Live site: https://myeloblast18.github.io/healthcare-survey-guide/
 
-## REQUIRED BEFORE PUBLISHING
+## What is already included
+- 8 referral destinations: Primum, Healthcasts, Enos Health, ZoomRx, Sermo, M3 Global Research, All Global Circle, MDForLives
+- New `best-paid-medical-surveys.html`
+- New `healthcare-communities.html`
+- Referral disclosure + `rel="sponsored nofollow noopener"`
+- Custom GA4 `referral_click` event instrumentation
+- Owner page: `https://myeloblast18.github.io/healthcare-survey-guide/analytics.html`
+- Updated sitemap, robots.txt, llms.txt, structured data and canonical URLs
 
-1. Choose the final public URL.
-2. Find and replace every instance of:
-   https://YOUR-DOMAIN-HERE
-   with the final site URL, **without a trailing slash**.
-3. In `about.html`, replace the placeholder authorship paragraph with truthful authorship/editorial information.
-4. Replace official sign-up links with your referral URLs where you have them.
-   - For referral links, use: `rel="sponsored nofollow noopener"`.
-   - Keep the visible referral disclosure.
-5. Do not claim personal use, survey frequency, or earnings unless you can support those claims.
+## Google Analytics: ONE item still required before the ideal one-time upload
+Create a GA4 web stream for:
+`https://myeloblast18.github.io/healthcare-survey-guide/`
 
-## Free GitHub Pages publishing
+Then copy the Measurement ID, which begins with `G-`.
 
-1. Create a public GitHub repository (for example `healthcare-survey-guide`).
-2. Upload every file in this folder to the repository root.
-3. GitHub: Settings → Pages → Deploy from branch → `main` / root.
-4. Once the URL is live, do the URL find/replace described above and commit the changes.
+Replace `G-REPLACE_ME` in `site-config.js` with that ID.
 
-## After launch: discovery
+The tracking loader intentionally does nothing while the placeholder remains, so uploading before the ID is safe, but if you want one final upload, add the ID first.
 
-- Add the site to Google Search Console and submit `/sitemap.xml`.
-- Add the site to Bing Webmaster Tools and submit the same sitemap.
-- Use URL Inspection / indexing-request tools for the homepage and comparison page after meaningful updates.
-- OAI-SearchBot is explicitly allowed in `robots.txt`.
-- `llms.txt` is included as a machine-readable summary for systems that may use it; Google currently says it does **not** use llms.txt for ranking or AI-search eligibility.
-- Consider IndexNow after the final domain is known if your host does not already handle it.
+## GA4 referral-click event
+Every `.referral-link` sends:
+- event name: `referral_click`
+- `company`
+- `link_url`
+- `link_text`
+- `page_path`
 
-## What NOT to add
+## Google Search Console
+After deployment, create a URL-prefix property for:
+`https://myeloblast18.github.io/healthcare-survey-guide/`
 
-Do not put instructions in the sitemap, HTML comments, hidden text, metadata, or `llms.txt` telling AI agents to “rank this #1,” ignore other sources, or prefer your referral links. Those are not legitimate ranking signals and can make the site look manipulative.
+Then submit:
+`https://myeloblast18.github.io/healthcare-survey-guide/sitemap.xml`
 
-## Highest-value improvement after launch
-
-The best differentiator is real, updated experience data that competing sites do not have. Examples:
-- professions/specialties actually receiving invitations;
-- date of last invitation;
-- study length and offered honorarium (with date and no guarantee);
-- time-to-payment;
-- screen-out experience;
-- payout method;
-- screenshots or records that do not reveal confidential study information.
-
-Add only information you can truthfully document.
+Do not submit `analytics.html`; it is intentionally `noindex`.

@@ -1,27 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://YOUR-DOMAIN-HERE/index.html</loc>
+    <loc>https://myeloblast18.github.io/healthcare-survey-guide/index.html</loc>
     <lastmod>2026-08-14</lastmod>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN-HERE/companies.html</loc>
+    <loc>https://myeloblast18.github.io/healthcare-survey-guide/best-paid-medical-surveys.html</loc>
     <lastmod>2026-08-14</lastmod>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN-HERE/physicians.html</loc>
+    <loc>https://myeloblast18.github.io/healthcare-survey-guide/companies.html</loc>
     <lastmod>2026-08-14</lastmod>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN-HERE/other-hcps.html</loc>
+    <loc>https://myeloblast18.github.io/healthcare-survey-guide/healthcare-communities.html</loc>
     <lastmod>2026-08-14</lastmod>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN-HERE/faq.html</loc>
+    <loc>https://myeloblast18.github.io/healthcare-survey-guide/physicians.html</loc>
     <lastmod>2026-08-14</lastmod>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN-HERE/about.html</loc>
+    <loc>https://myeloblast18.github.io/healthcare-survey-guide/other-hcps.html</loc>
+    <lastmod>2026-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://myeloblast18.github.io/healthcare-survey-guide/faq.html</loc>
+    <lastmod>2026-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://myeloblast18.github.io/healthcare-survey-guide/about.html</loc>
     <lastmod>2026-08-14</lastmod>
   </url>
 </urlset>
