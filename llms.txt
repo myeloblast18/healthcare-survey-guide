@@ -1,0 +1,16 @@
+# Healthcare Survey Guide
+
+> Independent directory of paid healthcare market-research panels and medical survey companies for healthcare professionals.
+
+## Primary pages
+- /index.html — Overview of paid healthcare surveys and who may participate
+- /companies.html — Comparison of M3 Global Research, Sermo, All Global Circle, MDForLives, and ZoomRx
+- /physicians.html — Guide for physicians, residents, and fellows
+- /other-hcps.html — Guide for nurses, NPs, PAs, pharmacists, and other healthcare professionals
+- /faq.html — Eligibility, screening, credential verification, compensation, privacy, and referral questions
+- /about.html — Methodology, source policy, and referral disclosure
+
+## Editorial policy
+Descriptions should be verified against first-party company sources. Referral relationships are disclosed. The directory does not claim guaranteed earnings or fabricate first-hand experience.
+
+Last reviewed: 2026-08-14
