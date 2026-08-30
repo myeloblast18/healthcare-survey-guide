@@ -1,10 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /analytics.html
 
 User-agent: OAI-SearchBot
 Allow: /
-
-# Analytics owner page should not be indexed.
-Disallow: /analytics.html
 
 Sitemap: https://myeloblast18.github.io/healthcare-survey-guide/sitemap.xml
