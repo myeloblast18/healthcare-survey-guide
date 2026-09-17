@@ -10,3 +10,8 @@ Core pages: /best-paid-medical-surveys.html, /signup-bonuses.html, /screenout-co
 Company reviews: /enos-health-review.html, /zoomrx-review.html, /sermo-review.html, /m3-global-research-review.html, /all-global-circle-review.html, /mdforlives-review.html, /primum-review.html, /healthcasts-review.html.
 
 Referral links are disclosed and marked sponsored/nofollow. Company-policy claims are separated from contributor observations.
+
+## Panel comparisons
+- [ZoomRx vs Sermo](https://myeloblast18.github.io/healthcare-survey-guide/zoomrx-vs-sermo.html): Eligibility, payment and signup comparison.
+- [Enos vs ZoomRx](https://myeloblast18.github.io/healthcare-survey-guide/enos-vs-zoomrx.html): Screen-out policies and payment methods.
+- [Start here](https://myeloblast18.github.io/healthcare-survey-guide/start-here.html): Choose an appropriate panel.

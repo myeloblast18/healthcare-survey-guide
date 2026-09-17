@@ -22,7 +22,9 @@
       company: a.dataset.company || "unknown",
       link_url: a.href,
       link_text: (a.textContent || "").trim(),
-      page_path: location.pathname
+      page_path: location.pathname,
+      placement: a.dataset.placement || (a.closest("aside") ? "sidebar" : a.closest(".hero-cta") ? "hero" : "content"),
+      transport_type: "beacon"
     });
   });
 })();
