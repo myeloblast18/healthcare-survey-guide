@@ -1,0 +1,64 @@
+name: Normalize site dates and homepage links
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/site-consistency.yml'
+permissions:
+  contents: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Standardize visible site version labels and link new guides
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          label = 'Site version: October 27, 2026 (verify live offers with each provider)'
+          months = r'(?:January|February|March|April|May|June|July|August|September|October|November|December)'
+          date = rf'{months}\s+\d{{1,2}},?\s+20\d{{2}}'
+          patterns = [
+              re.compile(rf'(?i)\b(?:Last\s+reviewed|Last\s+updated|Verified/updated|Updated)\s*[:·]?\s*{date}'),
+          ]
+          links = '''<section aria-label="Survey guides" style="max-width:1100px;margin:18px auto;padding:16px;border:1px solid #dae1ea;border-radius:12px">
+          <h2>Find paid medical surveys by specialty</h2>
+          <p><a href="paid-medical-surveys-for-doctors.html">Paid surveys for physicians</a> · <a href="oncologist-paid-surveys.html">Paid surveys for oncologists</a></p>
+          </section>'''
+          edited = []
+          for path in sorted(Path('.').glob('*.html')):
+              source = path.read_text(encoding='utf-8')
+              out = source
+              # Only replace visible text between tags, never metadata, links, code, or structured data.
+              parts = re.split(r'(<[^>]+>)', out)
+              for i in range(0, len(parts), 2):
+                  for pattern in patterns:
+                      parts[i] = pattern.sub(label, parts[i])
+              out = ''.join(parts)
+              # Pages without an existing update label also get the same consistent site-version notice.
+              if label not in out:
+                  notice = '<p class="site-version" style="text-align:center;font-size:12px;opacity:.75;margin:20px auto">' + label + '</p>'
+                  close = re.search(r'</body\s*>', out, re.I)
+                  if close:
+                      out = out[:close.start()] + notice + '\n' + out[close.start():]
+              if path.name == 'index.html':
+                  if ('paid-medical-surveys-for-doctors.html' not in out or
+                      'oncologist-paid-surveys.html' not in out):
+                      match = re.search(r'</header\s*>', out, re.I)
+                      if match:
+                          out = out[:match.end()] + '\n' + links + '\n' + out[match.end():]
+              if out != source:
+                  path.write_text(out, encoding='utf-8')
+                  edited.append(str(path))
+          print('Updated:', ', '.join(edited) if edited else 'No updates needed')
+      - name: Commit updated pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- '*.html'
+          if ! git diff --cached --quiet; then
+            git commit -m "Standardize visible site-version dates and homepage guide links"
+            git push
+          fi
